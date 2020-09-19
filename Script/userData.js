@@ -27,6 +27,8 @@ function calcCovidPoints() {
   //   covidPoints += 3;
   // }
 
+  var isAbroad = document.getElementById("exampleRadios1");
+  var isContact = document.getElementById("exampleRadios3")
   var isFever = document.getElementById("defaultCheck1");
   var isCough = document.getElementById("defaultCheck2");
   var isTiredness = document.getElementById("defaultCheck3");
@@ -37,6 +39,12 @@ function calcCovidPoints() {
   var isChestPain = document.getElementById("defaultCheck8");
   var isLossOfSM = document.getElementById("defaultCheck9");
 
+  if(isAbroad.checked){
+  	covidPoints += 1;
+  }
+  if(isContact.checked){
+  	covidPoints += 2
+  }
   if(isFever.checked){
   covidPoints += 3;
   }
