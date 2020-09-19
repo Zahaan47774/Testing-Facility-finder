@@ -1,33 +1,34 @@
 var covidPoints = 0;
 var testLocation = "";
-var age = 0;
-
-var dob = document.getElementById("date2");
-var currDate = document.getElementById("date1");
-
-function calculate_age(dt1, dt2) {
-  var diff = (dt2.getTime() - dt1.getTime()) / 1000;
-  diff /= (60 * 60 * 24);
-  return Math.abs(Math.round(diff/365.25));
- }
+// var age = 0;
+//
+// var dob = document.getElementById("date2").value;
+// var currDate = document.getElementById("date1").value;
+//
+// function calculate_age(dt1, dt2) {
+//   var diff = (dt2.getTime() - dt1.getTime()) / 1000;
+//   diff /= (60 * 60 * 24);
+//   return Math.abs(Math.round(diff/365.25));
+//  }
 
 function calcCovidPoints() {
-  var age = calculate_age(dob, currDate);
-
-  if(age < 4){
-    covidPoints += 3;
-  } else if(age < 18){
-    covidPoints += 0;
-  } else if(age < 40){
-    covidPoints += 1;
-  } else if(age < 60){
-    covidPoints += 2;
-  } else if(age > 60){
-    covidPoints += 3;
-  }
+  // var age = calculate_age(dob, currDate);
+  // console.log(age);
+  //
+  // if(age < 4){
+  //   covidPoints += 3;
+  // } else if(age < 18){
+  //   covidPoints += 0;
+  // } else if(age < 40){
+  //   covidPoints += 1;
+  // } else if(age < 60){
+  //   covidPoints += 2;
+  // } else if(age > 60){
+  //   covidPoints += 3;
+  // }
 
   var isFever = document.getElementById("defaultCheck1");
-  var isDryCough = document.getElementById("defaultCheck2");
+  var isCough = document.getElementById("defaultCheck2");
   var isTiredness = document.getElementById("defaultCheck3");
   var isSoreThroat = document.getElementById("defaultCheck4");
   var isDiarrhoea = document.getElementById("defaultCheck5");
@@ -60,17 +61,19 @@ function calcCovidPoints() {
   covidPoints += 3;
   }
 
-  if(isShortnessOfBreath.checked){
+  if(isShortnessOfB.checked){
   covidPoints += 10;
   }
 
-  if(isPersistentPain.checked){
+  if(isChestPain.checked){
   covidPoints += 10;
   }
 
   if(isLossOfSM.checked){
   covidPoints += 10;
   }
+
+  console.log(covidPoints);
 }
 
 function findLocation(){
@@ -81,8 +84,5 @@ function findLocation(){
   } else {
     testLocation = "Hospital";
   }
+  console.log(testLocation);
 }
-
-console.log(age);
-console.log(covidPoints);
-console.log(testLocation);
