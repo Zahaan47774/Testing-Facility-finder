@@ -54,3 +54,9 @@
   margin-bottom: 1em;
   font-weight: 200;
 }
+
+#map {
+  height: 25%;
+  width: 70%;
+  margin-left: 15%;
+}
