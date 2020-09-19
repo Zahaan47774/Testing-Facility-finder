@@ -1,12 +1,14 @@
 public class TestingCenter {
+  private String typeOfCenter;
   private String nameOfCenter;
   private String address;
   private String phoneNum;
   private String latitude;
   private String longitude;
 
-  public TestingCenter(String nameOfCenter, String address, String latitude, String longitude,
+  public TestingCenter(String typeOfCenter, String nameOfCenter, String address, String latitude, String longitude,
       String phoneNum) {
+    this.typeOfCenter = typeOfCenter;
     this.nameOfCenter = nameOfCenter;
     this.address = address;
     this.phoneNum = phoneNum;
