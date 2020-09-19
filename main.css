@@ -1,0 +1,16 @@
+.mainForm{
+	border-style: solid;
+	border-color: #bd1111;
+	border-width: 5px;
+	margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+	height: 90em;
+	width :60em;
+}
+.logo{
+  align-self: left;
+  margin:5em;
+  height:10em;
+  width:10em;
+}
