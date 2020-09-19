@@ -81,5 +81,6 @@ function findLocation(covidPoints){
   }
 }
 
+console.log(age);
 console.log(covidPoints);
 console.log(testLocation);
