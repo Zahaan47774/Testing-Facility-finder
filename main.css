@@ -5,7 +5,7 @@
 	margin: 0 auto;
   margin-top: 100px;
   margin-bottom: 100px;
-	height: 90em;
+	height: 100em;
 	width :60em;
 }
 .logo{
@@ -42,7 +42,7 @@
     color: #4d4d4d;
   }
   .inputName{
-    font-size: 14px; 
+    font-size: 14px;
     font-weight: 300;
      margin-top: 9px
   }

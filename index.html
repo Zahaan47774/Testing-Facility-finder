@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
  <script src="Script/main.js"></script>
+ <script src="Script/userData.js"></script>
 <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
 <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
 
@@ -14,7 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 <body>
 <div class="mainForm">
-	
+
 
 	<img src="images/logo.png" class="logo" align="left">
 	<div class="text" align="right">
@@ -27,11 +28,11 @@
 <label class = "name" style= "margin-left: 18em" align = "right">Date Of Birth</label>
   <div class="row">
 	<div class="form-group col-md-4"> <!-- Date input -->
-        <input style = "height : 40px; margin-left: 1em; width: 17em" class="form-control" id="date" name="date"  type="text"/>
+        <input style = "height : 40px; margin-left: 1em; width: 17em" class="form-control" id="date1" name="date"  type="text"/>
         <label class = "inputName" style = "margin-left: 1em" for="date">MM / DD / YYY</label>
       </div>
 	<div class="form-group col-md-4"> <!-- Date input -->
-        <input style = "height : 40px; margin-left: 1em; width: 17em" class="form-control" id="date" name="date"  type="text"/>
+        <input style = "height : 40px; margin-left: 1em; width: 17em" class="form-control" id="date2" name="date"  type="text"/>
         <label class = "inputName" style = "margin-left: 1em" for="date">MM / DD / YYY</label>
       </div>
   </div>
@@ -43,7 +44,7 @@
       <label class = "inputName" for="first">First Name</label>
     </div>
     <div class="form-group col-md-4" >
-      
+
       <input type="lastName" style = "height : 40px" class="form-control" id="last" >
       <label class = "inputName" for="last">Last Name</label>
     </div>
@@ -82,25 +83,55 @@
      <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" >
   <label class="form-check-label" for="defaultCheck1" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
-    Fever 
+    Fever
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
   <label class="form-check-label" for="defaultCheck2" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
-    Cough
+    Dry Cough
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-  <label class="form-check-label" for="defaultCheck3" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
-    Shortness of Breath
+  <label class="form-check-label" for="defaultCheck4" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
+    Tiredness
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
   <label class="form-check-label" for="defaultCheck4" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
+    Sore Throat
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+  <label class="form-check-label" for="defaultCheck4" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
+    Diarrhoea
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+  <label class="form-check-label" for="defaultCheck4" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
+    Loss of Taste and Smell
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+  <label class="form-check-label" for="defaultCheck4" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
     Persistent Pain in the chest
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+  <label class="form-check-label" for="defaultCheck3" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
+    Shortness of Breath
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck9">
+  <label class="form-check-label" for="defaultCheck4" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
+    Loss of Speech and Movement
   </label>
 </div>
 <div align="center" style="margin-top: 3em">
@@ -127,4 +158,3 @@
       date_input.datepicker(options);
     })
 </script>
-
