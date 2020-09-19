@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
+ <script src="Script/main.js"></script>
 <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
 <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
 
@@ -80,31 +80,31 @@
 </div>
 <label class = "abroad">Please state whether you've experienced/are experiencing the following Symptoms</label>
      <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" >
   <label class="form-check-label" for="defaultCheck1" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
     Fever 
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+  <label class="form-check-label" for="defaultCheck2" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
     Cough
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+  <label class="form-check-label" for="defaultCheck3" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
     Shortness of Breath
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+  <label class="form-check-label" for="defaultCheck4" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
     Persistent Pain in the chest
   </label>
 </div>
 <div align="center" style="margin-top: 3em">
-<button type="button" class="btn btn-lg btn-primary" onclick="window.location.href='TestingFound.html'">Submit</button>
+<button type="button" class="btn btn-lg btn-primary" onclick="myFunction()">Submit</button>
 <button type="button" class="btn btn-secondary btn-lg" onclick="window.location.href='Cancel.html'"d>Cancel</button>
 </div>
 </form>
@@ -112,6 +112,9 @@
 </body>
 </html>
 <script>
+
+
+
     $(document).ready(function(){
       var date_input=$('input[name="date"]'); //our date input has the name "date"
       var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
