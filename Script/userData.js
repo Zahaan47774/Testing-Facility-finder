@@ -10,22 +10,77 @@ var testLocation = "";
 //   diff /= (60 * 60 * 24);
 //   return Math.abs(Math.round(diff/365.25));
 //  }
+function getAge(dateString) {
+  var now = new Date();
+  var today = new Date(now.getYear(),now.getMonth(),now.getDate());
+
+  var yearNow = now.getYear();
+  var monthNow = now.getMonth();
+  var dateNow = now.getDate();
+
+  var dob = new Date(dateString.substring(6,10),
+                     dateString.substring(0,2)-1,                   
+                     dateString.substring(3,5)                  
+                     );
+
+  var yearDob = dob.getYear();
+  var monthDob = dob.getMonth();
+  var dateDob = dob.getDate();
+  var age = {};
+  var ageString = "";
+  var yearString = "";
+  var monthString = "";
+  var dayString = "";
+
+
+  yearAge = yearNow - yearDob;
+
+  if (monthNow >= monthDob)
+    var monthAge = monthNow - monthDob;
+  else {
+    yearAge--;
+    var monthAge = 12 + monthNow -monthDob;
+  }
+
+  if (dateNow >= dateDob)
+    var dateAge = dateNow - dateDob;
+  else {
+    monthAge--;
+    var dateAge = 31 + dateNow - dateDob;
+
+    if (monthAge < 0) {
+      monthAge = 11;
+      yearAge--;
+    }
+  }
+
+  age = {
+      years: yearAge,
+      months: monthAge,
+      days: dateAge
+      };
+
+  if ( age.years > 1 ) yearString = " years";
+  else yearString = " year";
+
+
+  return age.years;
+}
 
 function calcCovidPoints() {
-  // var age = calculate_age(dob, currDate);
-  // console.log(age);
-  //
-  // if(age < 4){
-  //   covidPoints += 3;
-  // } else if(age < 18){
-  //   covidPoints += 0;
-  // } else if(age < 40){
-  //   covidPoints += 1;
-  // } else if(age < 60){
-  //   covidPoints += 2;
-  // } else if(age > 60){
-  //   covidPoints += 3;
-  // }
+	var age = getAge(document.getElementById("date2").value)
+ 
+  if(age < 4){
+    covidPoints += 3;
+  } else if(age < 18){
+    covidPoints += 0;
+  } else if(age < 40){
+    covidPoints += 1;
+  } else if(age < 60){
+    covidPoints += 2;
+  } else if(age > 60){
+    covidPoints += 3;
+  }
 
   var isAbroad = document.getElementById("exampleRadios1");
   var isContact = document.getElementById("exampleRadios3")
@@ -82,6 +137,7 @@ function calcCovidPoints() {
   }
 
   console.log(covidPoints);
+  console.log(age);
 }
 
 function findLocation(){
