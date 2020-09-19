@@ -1,4 +1,3 @@
-
 public class TestingCenter {
   private String nameOfCenter;
   private String address;

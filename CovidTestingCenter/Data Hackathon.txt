@@ -1,21 +1,17 @@
+Hospital,UW Health University Hospital,600 Highland Ave Madison WI United States,+1 608-263-6400,43.078331,-89.429970
 
-UW Health University Hospital,600 Highland Ave Madison WI United States,+1 608-263-6400,43.078331,-89.429970
+Testing Center,Alliant Energy Center,1919 Alliant Energy Center Way Madison WI United States,+1 608-267-3976,43.043900,-89.380640
 
-Alliant Energy Center,1919 Alliant Energy Center Way Madison WI United States,+1 608-267-3976,43.043900,-89.380640
+Testing Center,CVS,6701 Mineral Point Rd Madison WI United States,+1 608-833-4588,43.060270,-89.497370
 
-CVS,6701 Mineral Point Rd Madison WI United States,+1 608-833-4588,43.060270,-89.497370
+Hospital,UW Health West Towne Clinic,7102 Mineral Point Rd Madison WI United States,+1 608-828-7676,43.061450,-89.505880
 
-UW Health West Towne Clinic,7102 Mineral Point Rd Madison WI United States,+1 608-828-7676,43.061450,-89.505880
+Testing Center,CVS, 2149 Prairie Ave Beloit WI United States,+1 608-362-1767,42.531770,-89.010960
 
-CVS, 2149 Prairie Ave Beloit WI United States,+1 608-362-1767,42.531770,-89.010960 
+Hospital,Minute Clinic,1130 W Sunset Dr. Waukesha WI United States,+1 262-446-5169,42.988920,-88.254990
 
-Minute Clinic,1130 W Sunset Dr. Waukesha WI United States,+1 262-446-5169,42.988920,-88.254990
+Testing Center,Henry Mall (University Testing Center),W of 420 Henry Mall UW-Madison WI United States,+1 608-262-1069,43.074162,-89.410452
 
-Henry Mall (University Testing Center),W of 420 Henry Mall UW-Madison WI United States,+1 608-262-1069,43.074162,-89.410452 
+Testing Center,Kohl Center (University Testing Center),601 W. Dayton St.,+1 608-263-5645,43.0694,-89.3967
 
-Kohl Center (University Testing Center),601 W. Dayton St.,+1 608-263-5645,43.0694,-89.3967
-
-Frank Holt Center (University Testing Center),1650 Kronshage Dr. Madison WI United States,+1 608-262-2226,43.077890,-89.413590
-
-
-	
+Testing Center,Frank Holt Center (University Testing Center),1650 Kronshage Dr. Madison WI United States,+1 608-262-2226,43.077890,-89.413590
