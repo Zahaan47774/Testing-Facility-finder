@@ -1,5 +1,7 @@
 var covidPoints = 0;
-var testLocation ="";
+var testLocation = "";
+var age = 0;
+
 var dob = document.getElementById("defaultCheck1");
 var currDate = document.getElementById("defaultCheck1");
 
