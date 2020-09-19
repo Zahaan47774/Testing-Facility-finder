@@ -9,8 +9,48 @@
 	width :60em;
 }
 .logo{
-  align-self: left;
-  margin:5em;
-  height:10em;
-  width:10em;
+  margin:4em;
+  margin-bottom:2em;
+  height:17em;
+  width: 17em;
+}
+.text {
+  margin : 4em;
+  padding-top: 3em;
+  text-align: center;
+  }
+
+  .headingText{
+    font-size: 15px;
+  }
+
+  .form-group{
+    margin-left: 6em;
+  }
+  .name{
+    margin-left: 6em;
+    margin-bottom: 1em;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4d4d4d;
+  }
+  .abroad{
+    margin-left: 6em;
+    margin-bottom: 1em;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4d4d4d;
+  }
+  .inputName{
+    font-size: 14px; 
+    font-weight: 300;
+     margin-top: 9px
+  }
+  hr.solid {
+  border-top: 3px solid #bbb;
+}
+.form-check{
+  margin-left: 8em;
+  margin-bottom: 1em;
+  font-weight: 200;
 }
