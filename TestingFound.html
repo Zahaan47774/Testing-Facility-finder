@@ -12,116 +12,35 @@
 <!-- Bootstrap Date-Picker Plugin -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvxLHZR8yTYT22RbttnGK1vmZtR3prIjA&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <script src="Script/main.js"></script>
 <body>
 <div class="mainForm">
 	
 
 	<img src="images/logo.png" class="logo" align="left">
 	<div class="text" align="right">
-	<h2 >Fill the form and find your </br>Testing Location Now!</h2>
-	<p class = "headingText">For the health and safety of our community, declaration of illness is required. Be sure that the information you'll give is accurate and complete. Please get immediate medical attention if you have any of the COVID-19 signs.</p>
-    </div>
-
-<form>
-<label class = "name" align = "left">Date</label>
-<label class = "name" style= "margin-left: 18em" align = "right">Date Of Birth</label>
-  <div class="row">
-	<div class="form-group col-md-4"> <!-- Date input -->
-        <input style = "height : 40px; margin-left: 1em; width: 17em" class="form-control" id="date" name="date"  type="text"/>
-        <label class = "inputName" style = "margin-left: 1em" for="date">MM / DD / YYY</label>
-      </div>
-	<div class="form-group col-md-4"> <!-- Date input -->
-        <input style = "height : 40px; margin-left: 1em; width: 17em" class="form-control" id="date" name="date"  type="text"/>
-        <label class = "inputName" style = "margin-left: 1em" for="date">MM / DD / YYY</label>
-      </div>
+	 <h2 >You should take a test at the </br>institution below</h2>
+	 <p class = "headingText">For the health and safety of our community, please maintain social distancing at the testing location and ensure use of a mask and if tested positive, self-quarantine for 14 days.</p>
   </div>
-	<label class = "name">Name</label>
-  <div class="form-row">
+  <label class = "name" align = "left"></label>
 
-    <div class="form-group col-md-4">
-      <input type="firstName" style = "height : 40px" class="form-control" id="first" >
-      <label class = "inputName" for="first">First Name</label>
-    </div>
-    <div class="form-group col-md-4" >
-      
-      <input type="lastName" style = "height : 40px" class="form-control" id="last" >
-      <label class = "inputName" for="last">Last Name</label>
-    </div>
-  </div>
-
-<label class = "abroad">Have you travelled abroad during 2020?</label>
-<div class="form-check" >
-
-  <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1" style="font-weight: 300;font-size: 15px;margin-left: 1em;">
-    Yes, I have travelled abroad.
-  </label>
+    <div id="map"></div>
+<div>
+<label class = "name" style = "margin-top: 2em" align = "left">Name of testing facility</label></div></br>
+<label class = "name" style = "margin-top: 2em" align = "left">Address of testing facility</label></br>
+<label class = "name" style = "margin-top: 2em" align = "left">Latitude: </label></br>
+<label class = "name" style = "margin-top: 2em" align = "left">Longitude: </label></br>
+<div align="center" style="margin-top: 5em">
+<button type="button" class="btn btn-lg btn-primary" onclick="window.location.href='index.html'">Take Test Again</button>
+<button type="button" class="btn btn-secondary btn-lg" onclick="window.location.href='Cancel.html'">Cancel</button>
 </div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
-    No, I haven't travelled abroad.
-  </label>
 </div>
 
-<label class = "abroad">Have you been in contact with people being infected, suspected or diagnosed with COVID-19?</label>
-<div class="form-check" >
-
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1" style="font-weight: 300;font-size: 15px;margin-left: 1em;">
-    Yes, I have been in contact.
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
-    No, I haven't been in contact.
-  </label>
-</div>
-<label class = "abroad">Please state whether you've experienced/are experiencing the following Symptoms</label>
-     <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
-    Fever 
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
-    Cough
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
-    Shortness of Breath
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-  <label class="form-check-label" for="defaultCheck1" style="font-weight: 300;font-size: 15px; margin-left: 1em;">
-    Persistent Pain in the chest
-  </label>
-</div>
-<div align="center" style="margin-top: 3em">
-<button type="button" class="btn btn-lg btn-primary" disabled>Submit</button>
-<button type="button" class="btn btn-secondary btn-lg" disabled>Cancel</button>
-</div>
-</form>
 </div>
 </body>
 </html>
-<script>
-    $(document).ready(function(){
-      var date_input=$('input[name="date"]'); //our date input has the name "date"
-      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-      var options={
-        format: 'mm/dd/yyyy',
-        container: container,
-        todayHighlight: true,
-        autoclose: true,
-      };
-      date_input.datepicker(options);
-    })
-</script>
-
