@@ -2,11 +2,11 @@ var covidPoints = 0;
 var testLocation = "";
 var age = 0;
 
-var dob = document.getElementById("defaultCheck1");
-var currDate = document.getElementById("defaultCheck1");
+var dob = document.getElementById("date2");
+var currDate = document.getElementById("date1");
 
 function calculate_age(dt1, dt2) {
-  var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+  var diff = (dt2.getTime() - dt1.getTime()) / 1000;
   diff /= (60 * 60 * 24);
   return Math.abs(Math.round(diff/365.25));
  }
@@ -73,7 +73,7 @@ function calcCovidPoints() {
   }
 }
 
-function findLocation(covidPoints){
+function findLocation(){
   if (covidPoints < 5) {
     testLocation = "StayHome";
   } else if (covidPoints < 10) {
