@@ -1,15 +1,7 @@
 var covidPoints = 0;
 var testLocation = "";
-// var age = 0;
-//
-// var dob = document.getElementById("date2").value;
-// var currDate = document.getElementById("date1").value;
-//
-// function calculate_age(dt1, dt2) {
-//   var diff = (dt2.getTime() - dt1.getTime()) / 1000;
-//   diff /= (60 * 60 * 24);
-//   return Math.abs(Math.round(diff/365.25));
-//  }
+ var age = 0;
+
 function getAge(dateString) {
   var now = new Date();
   var today = new Date(now.getYear(),now.getMonth(),now.getDate());
