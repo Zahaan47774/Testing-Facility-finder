@@ -1,67 +1,32 @@
 var covidPoints = 0;
 var testLocation = "";
- var age = 0;
+var age = 0;
 
-function getAge(dateString) {
-  var now = new Date();
-  var today = new Date(now.getYear(),now.getMonth(),now.getDate());
+function getAge(bDay, currDay) {
+  var currDay = new Date(currDay.substring(6,10), currDay.substring(0,2)-1, currDay.substring(3,5));
+  var yearNow = currDay.getYear();
+  var monthNow = currDay.getMonth();
+  var dateNow = currDay.getDate();
 
-  var yearNow = now.getYear();
-  var monthNow = now.getMonth();
-  var dateNow = now.getDate();
-
-  var dob = new Date(dateString.substring(6,10),
-                     dateString.substring(0,2)-1,                   
-                     dateString.substring(3,5)                  
-                     );
-
+  var dob = new Date(bDay.substring(6,10), bDay.substring(0,2)-1, bDay.substring(3,5));
   var yearDob = dob.getYear();
   var monthDob = dob.getMonth();
   var dateDob = dob.getDate();
-  var age = {};
-  var ageString = "";
-  var yearString = "";
-  var monthString = "";
-  var dayString = "";
 
+  yearAge = yearNow - yearDob - 1;
 
-  yearAge = yearNow - yearDob;
-
-  if (monthNow >= monthDob)
-    var monthAge = monthNow - monthDob;
-  else {
-    yearAge--;
-    var monthAge = 12 + monthNow -monthDob;
+  if (monthNow > monthDob) {
+    yearAge++;
+  } else if (dateNow >= dateDob && monthNow == monthDob) {
+    yearAge++;
   }
 
-  if (dateNow >= dateDob)
-    var dateAge = dateNow - dateDob;
-  else {
-    monthAge--;
-    var dateAge = 31 + dateNow - dateDob;
-
-    if (monthAge < 0) {
-      monthAge = 11;
-      yearAge--;
-    }
-  }
-
-  age = {
-      years: yearAge,
-      months: monthAge,
-      days: dateAge
-      };
-
-  if ( age.years > 1 ) yearString = " years";
-  else yearString = " year";
-
-
-  return age.years;
+  return yearAge;
 }
 
 function calcCovidPoints() {
-	var age = getAge(document.getElementById("date2").value)
- 
+	var age = getAge(document.getElementById("date2").value, document.getElementById("date1").value)
+
   if(age < 4){
     covidPoints += 3;
   } else if(age < 18){
@@ -89,9 +54,11 @@ function calcCovidPoints() {
   if(isAbroad.checked){
   	covidPoints += 1;
   }
+
   if(isContact.checked){
   	covidPoints += 2
   }
+
   if(isFever.checked){
   covidPoints += 3;
   }
