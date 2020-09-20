@@ -26,8 +26,10 @@ function getAge(bDay, currDay) {
 
 function calcCovidPoints() {
 	var age = getAge(document.getElementById("date2").value, document.getElementById("date1").value)
-
-  if(age < 4){
+  if (age ===0) {
+    covidPoints +=0;
+  }
+    else if(age < 4){
     covidPoints += 3;
   } else if(age < 18){
     covidPoints += 0;
@@ -101,11 +103,12 @@ function calcCovidPoints() {
 
 function findLocation(){
   if (covidPoints < 5) {
-    testLocation = "StayHome";
-  } else if (covidPoints < 10) {
-    testLocation = "TestCenter";
+    window.location.assign("Cancel.html");
+  } else if (covidPoints < 12) {
+    window.location.assign("TestingFound.html");
   } else {
-    testLocation = "Hospital";
+    window.location.assign("HospitalFound.html");
   }
+  covidPoints = 0;
   console.log(testLocation);
 }
