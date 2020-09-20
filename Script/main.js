@@ -9,6 +9,7 @@ function initialize() {
   initMap();
   initAutocomplete();
 }
+
 let placeSearch;
 let autocomplete;
 const componentForm = {
@@ -71,9 +72,9 @@ function geolocate() {
       });
       autocomplete.setBounds(circle.getBounds());
     });
-    
+
   }
-  
+
 }
 
 let map;
@@ -89,4 +90,3 @@ function initMap() {
     title: 'Hello World!'
   });
 }
-
